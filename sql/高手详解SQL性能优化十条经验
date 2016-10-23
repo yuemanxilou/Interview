@@ -1,0 +1,13 @@
+链接：http://database.51cto.com/art/200904/118526.htm
+1 查询的模糊匹配 最好不要用like
+2 索引问题
+3 复杂操作：部分复杂的update select语句，可以适当拆成几步，先生成一些临时表，在进行关联操作
+4 update操作尽量写在一条语句中
+5 在可以使用union all的语句里，使用了union
+6 在where语句中，尽量避免对索引字段进行计算
+7 对where语句的法则
+   7.1 避免在where子句中使用in , not, or 或者having
+   7.2 不要以字符格式声明数字
+8 限制使用 select *
+9 排序：避免使用 distinct等操作
+10 合理使用临时表可以极大提高系统性能
