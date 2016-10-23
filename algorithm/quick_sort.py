@@ -4,15 +4,18 @@ __author__ = 'Michael'
 
 def partition(alist, start, end):
     pivot = alist[start]
+
     first = start + 1
     last = end
-    done  = True
+
+    done  = False
 
     while not done:
-        while alist[first] <= pivot and alist[first] <= pivot:
+        while first <= last  and alist[first] <= pivot:
             first = first + 1
-        while alist[last] >= pivot and alist[last] >= pivot:
+        while first <= last and alist[last] >= pivot:
             last = last -  1
+
         if first > last:
             done = True
         else:
@@ -23,6 +26,7 @@ def partition(alist, start, end):
     tmp = alist[start]
     alist[start] = alist[last]
     alist[last] = tmp
+
     return last
 
 def quick_sort(alist, start, end):
