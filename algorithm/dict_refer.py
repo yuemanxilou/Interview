@@ -15,3 +15,12 @@ print dict1
 
 dict2 = {}.fromkeys(('x', 'y'))
 print dict2
+
+dict3 = {}.fromkeys(('x', 'y'), 0)
+print 'dict3: %s' % dict3
+
+
+items = [('name','earth'), ('port',80)]
+dict4 =dict(items)
+print 'dict4: %s' % dict4
+print dict((['name', 'earth'],['port', 80]))
