@@ -7,12 +7,12 @@ class Node(object):
         self.right = right
         self.value= value
 
-def deep_binart_tree(root):
+def deep_binary_tree(root):
     if root is None:
         return -1
     print root.value
-    deep_binart_tree(root.left)
-    deep_binart_tree(root.right)
+    deep_binary_tree(root.left)
+    deep_binary_tree(root.right)
 
 
 def maxDepth(root):
